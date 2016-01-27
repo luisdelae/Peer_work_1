@@ -83,10 +83,15 @@ while (z > 0) {
 	z--;
 }
 
+/* value = 012345 //Why does this return the number 349 after the function?
+value = value.toString(); 
+console.log(value); //This logs out 5349 before the function as it does not take out the first digit.
+*/
+
 function convertString(val) {
 	val = val.toString();
 	if (val.length > 1) {
-		val = val.substring(1,val.length);
+		val = val.substring(1, val.length);
 	}
 	return val;
 };
